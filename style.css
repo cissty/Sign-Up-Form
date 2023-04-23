@@ -20,6 +20,12 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: blue;
+}
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -45,24 +51,26 @@ p, h1, h2, h3, h4, h5, h6 {
       .cont-2{
         background-image: linear-gradient(to bottom right, rgba(45, 60, 122, 0.7),rgba(4,9,30,0.7)), url(bg.gif);
         background-size: cover;
+        background-position: 10%;
       }
+      .get.started, .get.sign{
+        color: white;
+      }
+      .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
   }
   .cont-1 {
     height: 100vh;
     min-height: 100vh;
     min-width: 60vw;
   }
-  /* .cont-1::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom right, var(--bg-color), #000);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0%;
-  } */
-  
+
+
   .bg-video {
     object-fit: cover;
     object-position: 0%;
@@ -74,7 +82,6 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:10px;
     color: var(--black-text-color);
     font-family: var(--new-font);
 }
@@ -136,3 +143,24 @@ input:checked + .slider {
   .slider.round:before {
     border-radius: 50%;
   }
+  
+  .form-cont{
+    border: 4px solid rgb(255, 255, 255);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .submit-cont{
+    text-align: center;
+    margin-top: 5px;
+  }
+  
