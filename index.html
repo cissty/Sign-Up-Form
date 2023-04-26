@@ -7,19 +7,21 @@
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ca26679566.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
         <div class="main-container">
             <div class="cont-1">
-                <video class="bg-video" src="video.mp4" autoplay muted loop></video>
-                
+                <p class="cont-1-text">READY FOR AN ADVENTURE?</p>
+                <p class="on-wikipedia">check out adventure time on <a class="wikipedia-A" target="_blank" href="https://en.wikipedia.org/wiki/Adventure_Time"> Wikipedia </a></p>
+                <p class="copyright"><strong>Copyright © 2023 Cissty</strong>
+                <a href="https://github.com/cissty" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                </p>
             </div>
-            <div class="cont-2">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
+            <div class="cont-2">    
                     <div>
                         <h2 class="get sign">SIGN UP AND</h2>
                         <h2 class="get started">let's get started</h2>         
@@ -29,12 +31,12 @@
                         <form class="form" action="#" method="get">
                             <div class="username">
                                 <p><label for="username">Username</label></p>
-                                <input type="text" id="username" name="Username" required>
+                                <input type="text" id="username" name="Username" minlength="2" maxlength="18" required>
                
                             </div>
                             <div class="email-cont">
                                 <p><label for="email">E-mail</label></p>
-                                <input type="email" id="email" name="E-mail" required>
+                                <input type="email" id="email" name="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                             </div>
                            
                             <div class="password">
@@ -44,11 +46,11 @@
                            
                             <div class="confirm-password">
                                <p><label for="password">Confirm Password</label></p> 
-                                <input type="password" id="password" name="Password" required>
+                                <input type="password" id="passwordConfirm" name="Password" required>
                             </div>
 
                             <div class="submit-cont">
-                                <button type="submit">submit</button>
+                                <button class="sub-button" type="submit"><span class="span-button">submit</span></button>
                                 <p>don't have an account?</p>
                                 <p><a href="#"> create</a> </p>
                             </div>
@@ -57,7 +59,6 @@
              </div>
         </div>
     </main>
-    <footer></footer>
 </body>
 </html>
 

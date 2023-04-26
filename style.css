@@ -14,7 +14,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, picture, video, canvas, svg {
-  display: block;
   max-width: 100%;
 }
 input, button, textarea, select {
@@ -47,120 +46,122 @@ p, h1, h2, h3, h4, h5, h6 {
     .main-container {
       grid-template-columns: 0 100%;
     }
-       
+          
       .cont-2{
         background-image: linear-gradient(to bottom right, rgba(45, 60, 122, 0.7),rgba(4,9,30,0.7)), url(bg.gif);
         background-size: cover;
-        background-position: 10%;
-      }
-      .get.started, .get.sign{
-        color: white;
-      }
-      .form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+      } 
+      .form-cont{
+        color:white;
+      } 
+      .cont-1{
+        opacity: 0;
+      } 
       
   }
   .cont-1 {
-    height: 100vh;
-    min-height: 100vh;
-    min-width: 60vw;
-  }
-
-
-  .bg-video {
-    object-fit: cover;
-    object-position: 0%;
-    width: 100%;
-    height: 100vh;
-  }
-.cont-2{
-    background-color: rgba(226, 212, 201, 0.959);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-image: url(bg.gif);
+    background-size: cover;
+    background-position: 10%;
     color: var(--black-text-color);
     font-family: var(--new-font);
-}
-
-/* For DARK and LIGHT mode */
-.switch {
     position: relative;
-    display: block;
-    width: 30px;
-    height: 15px;
-    align-self: end;
 
   }
- 
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  .cont-1-text{
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 3.3rem;
+    padding: 10px;
+    background-color: #ebebeb21;
+    color: white;
   }
 
-  /* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+.cont-2{
+    background-color: rgba(243, 243, 243, 0.452);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: var(--black-text-color);
+    font-family: var(--new-font);
+    font-size: 2.8rem;
 
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 12px;
-    width: 12px;
-    left: 1px;
-    bottom: 2px;
-    background-color: rgb(255, 255, 255);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-input:checked + .slider {
-    background-color: #000000;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px);
-  }
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
+}
   .form-cont{
-    border: 4px solid rgb(255, 255, 255);
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
     margin-top: 10px;
   }
-
-  .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .submit-cont{
     text-align: center;
     margin-top: 5px;
   }
   
+  #email, #password, #username{
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+  }
+  input:invalid{
+    border-color: red;
+  }
+
+  input:valid{
+    border-color: green;
+  }
+ 
+
+  .sub-button{
+      background: hsl(340deg 100% 32%);
+      border: none;
+      border-radius: 12px;
+      padding: 0px;
+      cursor: pointer;
+      outline-offset: 4px;
+      margin-top: 10px;
+  }
+  .span-button{
+  display: block;
+  margin-top: 12px;
+  padding: 1px 3.3rem;
+  border-radius: 12px;
+  font-size: 2.15rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+  }
+
+  .sub-button:active .span-button{
+    transform: translateY(-2px);
+  }
+
+  .fa-github {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+    color: rgb(227, 238, 162);  
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg);
+  }
+  .copyright{
+    color: white;
+    font-size: 1.2rem;
+    left: 40%;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .on-wikipedia{
+    font-size: 1.3rem;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+  .wikipedia-A{
+    text-decoration: none;
+  }
+  .wikipedia-A:visited{
+    color: red;
+  }
